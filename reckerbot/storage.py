@@ -58,7 +58,7 @@ def smallest_file(message):
 @respond_to('total file size|total file usage|total storage', re.IGNORECASE)
 def total_usage(message):
     message.reply(
-        '{} files are taking up {}'.format(
+        '{} files are taking up about {}'.format(
             get_file_count(),
             size(sum(f['size'] for f in get_files()))
         )
