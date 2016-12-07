@@ -3,4 +3,4 @@ requests==2.11.1
 beautifulsoup4==4.5.1
 slacker==0.9.30
 hurry.filesize==0.9
-praw==3.6.0
+praw
