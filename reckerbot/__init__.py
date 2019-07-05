@@ -1,3 +1,10 @@
-from os import environ
+"""
+reckerbot
+"""
 
-NON_BOT_API_TOKEN = environ['NON_BOT_TOKEN']
+from .logging import logger
+
+
+__all__ = [
+    'logger'
+]
