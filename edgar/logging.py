@@ -3,7 +3,7 @@ import sys
 
 
 def _make_logger(level=logging.INFO):
-    logger = logging.getLogger('reckerbot')
+    logger = logging.getLogger('edgar')
     logger.setLevel(level)
     handler = logging.StreamHandler(sys.stdout)
     handler.setLevel(level)
