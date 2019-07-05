@@ -3,16 +3,21 @@ name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
 
+[[source]]
+url = "https://www.piwheels.org/simple"
+name = "piwheels"
+verify_ssl = true
+
 [dev-packages]
-rope = "*"
-flake8 = "*"
-importmagic = "*"
-autopep8 = "*"
-yapf = "*"
-ipdb = "*"
-ipython = "*"
-virtualenv = "*"
-virtualenvwrapper = "*"
+rope = {version = "*", index = "piwheels"}
+flake8 = {version = "*", index = "piwheels"}
+importmagic = {version = "*", index = "piwheels"}
+autopep8 = {version = "*", index = "piwheels"}
+yapf = {version = "*", index = "piwheels"}
+ipdb = {version = "*", index = "piwheels"}
+ipython = {version = "*", index = "piwheels"}
+virtualenv = {version = "*", index = "piwheels"}
+virtualenvwrapper = {version = "*", index = "piwheels"}
 
 [packages]
 

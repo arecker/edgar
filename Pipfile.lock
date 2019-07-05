@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c91cb0c6b13beb3632bb965cd9dc5c41a8daebde54a74a00965086eb9b5d041e"
+            "sha256": "2329d2f8cc5ca487f669bccba567e2b2c3a90ec5c477e4d5791b442dad223b33"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -12,6 +12,11 @@
                 "name": "pypi",
                 "url": "https://pypi.org/simple",
                 "verify_ssl": true
+            },
+            {
+                "name": "piwheels",
+                "url": "https://www.piwheels.org/simple",
+                "verify_ssl": true
             }
         ]
     },
@@ -19,14 +24,16 @@
     "develop": {
         "autopep8": {
             "hashes": [
-                "sha256:4d8eec30cc81bc5617dbf1218201d770dc35629363547f17577c61683ccfb3ee"
+                "sha256:4d8eec30cc81bc5617dbf1218201d770dc35629363547f17577c61683ccfb3ee",
+                "sha256:c89f04e9a613a5ade6edcea5206d242efdb2eb3a49db31c792357237c4db1c93"
             ],
-            "index": "pypi",
+            "index": "piwheels",
             "version": "==1.4.4"
         },
         "backcall": {
             "hashes": [
                 "sha256:38ecd85be2c1e78f77fd91700c76e14667dc21e2713b63876c0eb901196e01e4",
+                "sha256:65d380041000921f67ec230b41e9f50904f52594dc3e6139c41a08c98c4bca77",
                 "sha256:bbbf4b1e5cd2bdb08f915895b51081c041bac22394fdfcfdfbe9f14b77c08bf2"
             ],
             "version": "==0.1.0"
@@ -50,21 +57,23 @@
                 "sha256:859996073f341f2670741b51ec1e67a01da142831aa1fdc6242dbf88dffbe661",
                 "sha256:a796a115208f5c03b18f332f7c11729812c8c3ded6c46319c59b53efd3819da8"
             ],
-            "index": "pypi",
+            "index": "piwheels",
             "version": "==3.7.7"
         },
         "importmagic": {
             "hashes": [
+                "sha256:38c3cd75314f1c33b571488d8454e1b18abbcf9529174e31d33f88b5087f31b8",
                 "sha256:3f7757a5b74c9a291e20e12023bb3bf71bc2fa3adfb15a08570648ab83eaf8d8"
             ],
-            "index": "pypi",
+            "index": "piwheels",
             "version": "==0.1.7"
         },
         "ipdb": {
             "hashes": [
+                "sha256:6885265b5200ac929f43d8f0183e36e7f202df3bbb111887a0271c62f271f903",
                 "sha256:dce2112557edfe759742ca2d0fee35c59c97b0cc7a05398b791079d78f1519ce"
             ],
-            "index": "pypi",
+            "index": "piwheels",
             "version": "==0.12"
         },
         "ipython": {
@@ -72,7 +81,7 @@
                 "sha256:11067ab11d98b1e6c7f0993506f7a5f8a91af420f7e82be6575fcb7a6ca372a0",
                 "sha256:60bc55c2c1d287161191cc2469e73c116d9b634cff25fe214a43cba7cec94c79"
             ],
-            "index": "pypi",
+            "index": "piwheels",
             "version": "==7.6.1"
         },
         "ipython-genutils": {
@@ -167,7 +176,7 @@
                 "sha256:c5c5a6a87f7b1a2095fb311135e2a3d1f194f5ecb96900fdd0a9100881f48aaf",
                 "sha256:f0dcf719b63200d492b85535ebe5ea9b29e0d0b8aebeb87fe03fc1a65924fdaf"
             ],
-            "index": "pypi",
+            "index": "piwheels",
             "version": "==0.14.0"
         },
         "six": {
@@ -196,7 +205,7 @@
                 "sha256:b7335cddd9260a3dd214b73a2521ffc09647bde3e9457fcca31dc3be3999d04a",
                 "sha256:d28ca64c0f3f125f59cabf13e0a150e1c68e5eea60983cc4395d88c584495783"
             ],
-            "index": "pypi",
+            "index": "piwheels",
             "version": "==16.6.1"
         },
         "virtualenv-clone": {
@@ -208,9 +217,10 @@
         },
         "virtualenvwrapper": {
             "hashes": [
-                "sha256:51a1a934e7ed0ff221bdd91bf9d3b604d875afbb3aa2367133503fee168f5bfa"
+                "sha256:51a1a934e7ed0ff221bdd91bf9d3b604d875afbb3aa2367133503fee168f5bfa",
+                "sha256:91dbb2c3cf55c60f7e2519b30ecdf4829f181cfc364e3c1788c86ff11f457d77"
             ],
-            "index": "pypi",
+            "index": "piwheels",
             "version": "==4.8.4"
         },
         "wcwidth": {
@@ -225,7 +235,7 @@
                 "sha256:34f6f80c446dcb2c44bd644c4037a2024b6645e293a4c9c4521983dd0bb247a1",
                 "sha256:613deba14233623ff3432d9d5032631b5f600be97b39f66932cbe67648bfa8ea"
             ],
-            "index": "pypi",
+            "index": "piwheels",
             "version": "==0.27.0"
         }
     }
