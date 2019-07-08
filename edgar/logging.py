@@ -2,7 +2,7 @@ import logging
 import sys
 
 
-def _make_logger(level=logging.DEBUG):
+def _make_logger(level=logging.CRITICAL):
     logger = logging.getLogger('edgar')
     logger.setLevel(level)
     handler = logging.StreamHandler(sys.stdout)

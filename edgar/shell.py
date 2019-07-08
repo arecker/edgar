@@ -1,6 +1,6 @@
 import subprocess
 
-from . import logger
+from edgar import logger
 
 
 def run(cmd):
