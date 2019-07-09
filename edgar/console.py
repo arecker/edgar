@@ -1,28 +1,42 @@
+"""
+supports the edgar console interface
+"""
+
 import re
 
 from edgar import logger, load_module
 
 
-def run(name='edgar'):
+def main(name='edgar'):
+    """
+    launches an edgar console session, loading module <name>
+    """
     logger.info('loading module %s', name)
     module = load_module(name)
-    module.help()
+    prompt = f'{name.upper()}> '
 
     while True:
-        response = _sanitize_input(input(module.console_prompt()))
-        logger.debug('received response: %s', response)
-        function, args = response[0], response[1:]
-        logger.debug('calling function %s with args %s', function, args)
-        module.manifest[function](*args)
+        command, args = _sanitize_input(input(prompt))
+
+        if command == 'exit':
+            logger.debug('exit called, leaving %s', name)
+            break
+        
+        logger.debug('calling command %s with args %s', command, args)
+        module.manifest[command](*args)
 
 
 def _sanitize_input(response):
-    regex = re.compile('[^a-zA-Z\, ]')
-    cleaned = regex.sub('', response)
+    logger.debug('received raw response: %s', response)
 
-    if ',' in cleaned:
-        arglist = cleaned.split(',')
-    else:
-        arglist = [cleaned]
+    # normalize casing
+    response = response.lower()
 
-    return [arg.lower() for arg in arglist]
+    # remove everything that's not a-z, a space, or comma
+    response = re.compile('[^a-z, ]').sub('', response)
+
+    # separate command name from args
+    response = response.split(' ')
+    command, args = response[0].strip(), response[1:]
+
+    return command, [arg.strip() for arg in args]
