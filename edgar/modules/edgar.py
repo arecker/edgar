@@ -11,5 +11,8 @@ module = Module('edgar')
 
 @module.register
 def load(name):
+    
+    """load a module"""
+
     main(name)
     

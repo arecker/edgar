@@ -24,10 +24,5 @@ def log(level):
 
     choice = _log_levels[level.lower()]
 
-    logger.info('setting log level to %s', level.lower())
     logger.setLevel(choice)
-
-
-@module.register
-def ping():
-    print('pong')
+    logger.info('set log level to %s', level.lower())
