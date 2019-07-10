@@ -56,20 +56,17 @@ def _sanitize_input(response):
 
 
 def _manifest_to_help_text(manifest):
-    defaults = {
-        'exit': 'exit the current module',
-        'help': 'show available commands',
-        'reload': 'reload the current module',
-    }
-
-
     commands = dict([
         (command, (func.__doc__ or '').strip())
         for command, func
         in manifest.items()
     ])
 
-    commands.update(defaults)
+    commands.update({
+        'exit': 'exit the current module',
+        'help': 'show available commands',
+        'reload': 'reload the current module',
+    })
 
     output = '\n'.join([
         f'{command.ljust(20)} {docstring.ljust(20)}'
